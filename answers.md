@@ -164,6 +164,17 @@ Trình duyệt thường phải đợi tải xong toàn bộ thẻ <table> thì 
 ### Câu C2 — So sánh & Tranh luận
 Quan điểm dùng <div> cho mọi thứ rồi thêm class, không cần semantic HTML là một quan điểm chưa chính xác, semantic HTML không chỉ giúp code rõ ràng hơn mà còn mang lại nhiều lợi ích kỹ thuật quan trọng. Thứ nhất về SEO, các công cụ tìm kiếm như Google dựa vào semantic tags để hiểu cấu trúc nội dung của trang web. Khi sử dụng các thẻ như <header>, <nav>, <main>, <article>, Google dễ xác định đâu là nội dung chính, đâu là điều hướng hay phần phụ, từ đó đánh giá trang tốt hơn. Nếu chỉ dùng nhiều <div>, công cụ tìm kiếm sẽ khó phân tích, làm giảm hiệu quả SEO. Thứ hai, semantic HTML cũng giúp cải thiện Accessibility. Các công cụ hỗ trợ như screen reader có thể đọc và phân tích cấu trúc trang tốt hơn khi gặp các thẻ semantic. Ví dụ, người khiếm thị dùng trình đọc màn hình có thể nhanh chóng chuyển đến khu vực <main> hoặc bỏ qua <nav>, giúp trải nghiệm truy cập thuận tiện hơn. Lấy ví dụ cụ thể, trên một trang thương mại điện tử, nếu mỗi sản phẩm được đặt trong thẻ <article>, hình ảnh dùng <figure> và menu nằm trong <nav>, cả công cụ tìm kiếm lẫn trình hỗ trợ đều hiểu chính xác chức năng từng phần. Điều này tốt hơn nhiều so với việc dùng <div class="product">. Tuy nhiên, nói như vậy không có nghĩa là chúng ta bài trừ <div>, <div> vẫn rất phù hợp trong những trường hợp cần nhóm các phần tử để phục vụ mục đích trình bày hoặc styling bằng CSS, chẳng hạn như gom nhiều nút vào một khối để áp dụng Flexbox hoặc Grid. Vì vậy, semantic HTML không thay thế hoàn toàn <div>, mà cần được kết hợp hợp lý để tạo nên cấu trúc web chính xác và hiệu quả.
 
+### Bài B3 — Debug HTML
+Lỗi 1: Dòng 1 — DOCTYPE sai cú pháp — sửa thành <!DOCTYPE html>
+Lỗi 2: Dòng 5 — thiếu đóng thẻ title — thêm </title>
+Lỗi 3: Dòng 6 — charset sai utf8 — sửa thành utf-8
+Lỗi 4: Dòng 9 — thẻ h1 không đóng đúng — <h1> bị thiếu </h1>
+Lỗi 5: Dòng 13 — thẻ <a> trang chủ không đóng — thêm </a>
+Lỗi 6: Dòng 19 — thiếu alt trong img — thêm alt="iPhone 16 Pro"
+Lỗi 7: Dòng 21 — thẻ <b> và </p> sai thứ tự — sửa lại đúng nesting
+Lỗi 8: Dòng 33 — dùng 2 thẻ main (semantic sai) — đổi main thứ 2 thành aside
+Lỗi 9: Dòng 42 — thiếu </p> trong footer
+Lỗi 10: Dòng nav href thiếu .html (logic lỗi) — nên thêm home.html, products.html
 
     
              
